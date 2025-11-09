@@ -20,4 +20,4 @@ endif()
 
 include_directories(include)
 
-add_library(glad STATIC ${GLAD_SOURCE})
+add_library(glad SHARED ${GLAD_SOURCE})
