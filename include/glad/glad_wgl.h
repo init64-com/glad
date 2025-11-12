@@ -1,4 +1,4 @@
-#if _WIN32
+#ifdef _WIN32
 
 #ifndef WINAPI
 #ifndef WIN32_LEAN_AND_MEAN
