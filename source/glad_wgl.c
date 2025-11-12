@@ -1,3 +1,5 @@
+#if _WIN32
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -542,3 +544,4 @@ int gladLoadWGLLoader(GLADloadproc load, HDC hdc) {
 	return 1;
 }
 
+#endif

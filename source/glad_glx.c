@@ -1,3 +1,5 @@
+#ifdef __unix__
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -655,3 +657,5 @@ int gladLoadGLXLoader(GLADloadproc load, Display *dpy, int screen) {
 	return 1;
 }
 
+
+#endif

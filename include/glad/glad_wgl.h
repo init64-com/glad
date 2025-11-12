@@ -1,3 +1,5 @@
+#if _WIN32
+
 #ifndef WINAPI
 #ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN 1
@@ -928,6 +930,8 @@ GLAPI PFNWGLWAITFORSBCOMLPROC glad_wglWaitForSbcOML;
 
 #ifdef __cplusplus
 }
+#endif
+
 #endif
 
 #endif
