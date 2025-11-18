@@ -13,4 +13,7 @@ endif()
 
 add_library(glad SHARED ${GLAD_SOURCE})
 target_include_directories(glad PUBLIC include/)
+if(LINUX)
+    target_link_libraries(glad PUBLIC X11)
+endif()
 target_compile_definitions(glad PRIVATE GLAD_API_CALL_EXPORT_BUILD PUBLIC GLAD_API_CALL_EXPORT)
