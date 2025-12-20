@@ -15,6 +15,7 @@ if(LINUX)
     target_link_libraries(glad PUBLIC X11 GL)
 elseif(WIN32)
     set(GLAD_SOURCE ${GLAD_SOURCE} source/wgl.c)
+    target_link_libraries(glad PUBLIC opengl32)
 endif()
 
 target_sources(glad PRIVATE ${GLAD_SOURCE})
