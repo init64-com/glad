@@ -1,6 +1,8 @@
 #ifndef GLAD_GLX_H_
 #define GLAD_GLX_H_
 
+#ifdef __linux__
+
 #ifdef GLX_H
   #error GLX header already included (API: glx), remove previous include!
 #endif
@@ -1147,4 +1149,7 @@ GLAD_API_CALL void gladLoaderUnloadGLX(void);
 #ifdef __cplusplus
 }
 #endif
+
+#endif // __linux__
+
 #endif

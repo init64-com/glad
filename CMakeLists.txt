@@ -12,10 +12,11 @@ target_include_directories(glad PUBLIC include/)
 
 if(LINUX)
     set(GLAD_SOURCE ${GLAD_SOURCE} source/glx.c)
-    target_sources(glad PRIVATE ${GLAD_SOURCE})
     target_link_libraries(glad PUBLIC X11 GL)
 elseif(WIN32)
     set(GLAD_SOURCE ${GLAD_SOURCE} source/wgl.c)
 endif()
+
+target_sources(glad PRIVATE ${GLAD_SOURCE})
 
 target_compile_definitions(glad PRIVATE GLAD_API_CALL_EXPORT_BUILD PUBLIC GLAD_API_CALL_EXPORT)

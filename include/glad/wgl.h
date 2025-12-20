@@ -1,6 +1,8 @@
 #ifndef GLAD_WGL_H_
 #define GLAD_WGL_H_
 
+#ifdef _WIN32
+
 #include <windows.h>
 #include <glad/gl.h>
 
@@ -993,4 +995,7 @@ GLAD_API_CALL int gladLoaderLoadWGL(HDC hdc);
 #ifdef __cplusplus
 }
 #endif
+
+#endif // _WIN32
+
 #endif

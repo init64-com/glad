@@ -1,3 +1,5 @@
+#ifdef __linux__
+
 /**
  * SPDX-License-Identifier: (WTFPL OR CC0-1.0) AND Apache-2.0
  */
@@ -663,7 +665,7 @@ int gladLoadGLX(Display *display, int screen, GLADloadfunc load) {
     return gladLoadGLXUserPtr(display, screen, glad_glx_get_proc_from_userptr, GLAD_GNUC_EXTENSION (void*) load);
 }
 
- 
+
 
 #ifdef GLAD_GLX
 
@@ -792,4 +794,6 @@ void gladLoaderUnloadGLX() {
 
 #ifdef __cplusplus
 }
+#endif
+
 #endif
