@@ -7,7 +7,7 @@ set(CMAKE_C_EXTENSIONS false)
 
 set(GLAD_SOURCE source/gl.c source/egl.c)
 
-add_library(glad SHARED)
+add_library(glad STATIC)
 target_include_directories(glad PUBLIC include/)
 
 if(LINUX)
