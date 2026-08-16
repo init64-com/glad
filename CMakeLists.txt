@@ -36,6 +36,7 @@ add_library(glext_obj OBJECT ${GLEXT_SOURCES})
 target_include_directories(glext_obj PUBLIC ${GLEXT_INCLUDE})
 target_link_libraries(glext_obj PUBLIC ${GLEXT_PLATFORM_LINK})
 target_compile_definitions(glext_obj PRIVATE GLEXT_API_CALL_EXPORT_BUILD)
+set_target_properties(glext_obj PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
 
 add_library(static_glext STATIC)
 target_link_libraries(static_glext PRIVATE glext_obj)
