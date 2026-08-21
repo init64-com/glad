@@ -10,7 +10,13 @@ This repository includes the following specifications:
 
 Generated using glad2, no AI.
 
-## External sites
+# How to use
+
+- Create your window make it current using GLFW or SDL.
+- Initialize `glext` with `glext_LoaderLoadGL()`.
+- Be happy.
+
+# External sites
 
 - https://dav1d.de/
 - https://gen.glad.sh/
